@@ -23,12 +23,9 @@ Partial Class laptop
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Label3 = New Label()
-        Button5 = New Button()
-        Button4 = New Button()
-        Button3 = New Button()
-        Button2 = New Button()
-        Button1 = New Button()
         GroupBox1 = New GroupBox()
+        TextBox2 = New TextBox()
+        Label1 = New Label()
         TextBox1 = New TextBox()
         Label6 = New Label()
         TextBox3 = New TextBox()
@@ -38,8 +35,11 @@ Partial Class laptop
         Label9 = New Label()
         TextBox6 = New TextBox()
         DataGridView1 = New DataGridView()
-        TextBox2 = New TextBox()
-        Label1 = New Label()
+        btnkembali = New Button()
+        btncari = New Button()
+        btnhapus = New Button()
+        btnedit = New Button()
+        btntambah = New Button()
         GroupBox1.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -47,56 +47,12 @@ Partial Class laptop
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Location = New Point(357, 420)
+        Label3.Location = New Point(510, 532)
+        Label3.Margin = New Padding(4, 0, 4, 0)
         Label3.Name = "Label3"
-        Label3.Size = New Size(35, 15)
+        Label3.Size = New Size(59, 19)
         Label3.TabIndex = 26
         Label3.Text = "anjay"
-        ' 
-        ' Button5
-        ' 
-        Button5.Location = New Point(470, 168)
-        Button5.Name = "Button5"
-        Button5.Size = New Size(100, 30)
-        Button5.TabIndex = 25
-        Button5.Text = "Kembali"
-        Button5.UseVisualStyleBackColor = True
-        ' 
-        ' Button4
-        ' 
-        Button4.Location = New Point(258, 168)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(100, 30)
-        Button4.TabIndex = 24
-        Button4.Text = "Cari"
-        Button4.UseVisualStyleBackColor = True
-        ' 
-        ' Button3
-        ' 
-        Button3.Location = New Point(364, 168)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(100, 30)
-        Button3.TabIndex = 23
-        Button3.Text = "Hapus"
-        Button3.UseVisualStyleBackColor = True
-        ' 
-        ' Button2
-        ' 
-        Button2.Location = New Point(152, 168)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(100, 30)
-        Button2.TabIndex = 22
-        Button2.Text = "Edit"
-        Button2.UseVisualStyleBackColor = True
-        ' 
-        ' Button1
-        ' 
-        Button1.Location = New Point(46, 168)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(100, 30)
-        Button1.TabIndex = 21
-        Button1.Text = "tambah"
-        Button1.UseVisualStyleBackColor = True
         ' 
         ' GroupBox1
         ' 
@@ -110,114 +66,181 @@ Partial Class laptop
         GroupBox1.Controls.Add(TextBox5)
         GroupBox1.Controls.Add(Label9)
         GroupBox1.Controls.Add(TextBox6)
-        GroupBox1.Location = New Point(47, 16)
+        GroupBox1.Location = New Point(67, 20)
+        GroupBox1.Margin = New Padding(4, 4, 4, 4)
         GroupBox1.Name = "GroupBox1"
-        GroupBox1.Size = New Size(523, 139)
+        GroupBox1.Padding = New Padding(4, 4, 4, 4)
+        GroupBox1.Size = New Size(747, 176)
         GroupBox1.TabIndex = 20
         GroupBox1.TabStop = False
         GroupBox1.Text = "data Pelanggan"
         ' 
+        ' TextBox2
+        ' 
+        TextBox2.Location = New Point(496, 81)
+        TextBox2.Margin = New Padding(4, 4, 4, 4)
+        TextBox2.Name = "TextBox2"
+        TextBox2.Size = New Size(205, 26)
+        TextBox2.TabIndex = 22
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(421, 81)
+        Label1.Margin = New Padding(4, 0, 4, 0)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(56, 19)
+        Label1.TabIndex = 21
+        Label1.Text = "Email"
+        ' 
         ' TextBox1
         ' 
-        TextBox1.Location = New Point(347, 32)
+        TextBox1.Location = New Point(496, 41)
+        TextBox1.Margin = New Padding(4, 4, 4, 4)
         TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(145, 23)
+        TextBox1.Size = New Size(205, 26)
         TextBox1.TabIndex = 20
         ' 
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Location = New Point(284, 32)
+        Label6.Location = New Point(406, 41)
+        Label6.Margin = New Padding(4, 0, 4, 0)
         Label6.Name = "Label6"
-        Label6.Size = New Size(47, 15)
+        Label6.Size = New Size(72, 19)
         Label6.TabIndex = 19
         Label6.Text = "No Telp"
         ' 
         ' TextBox3
         ' 
-        TextBox3.Location = New Point(136, 90)
+        TextBox3.Location = New Point(194, 114)
+        TextBox3.Margin = New Padding(4, 4, 4, 4)
         TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(145, 23)
+        TextBox3.Size = New Size(205, 26)
         TextBox3.TabIndex = 18
         ' 
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Location = New Point(32, 90)
+        Label7.Location = New Point(46, 114)
+        Label7.Margin = New Padding(4, 0, 4, 0)
         Label7.Name = "Label7"
-        Label7.Size = New Size(45, 15)
+        Label7.Size = New Size(71, 19)
         Label7.TabIndex = 17
         Label7.Text = "Alamat"
         ' 
         ' Label8
         ' 
         Label8.AutoSize = True
-        Label8.Location = New Point(32, 64)
+        Label8.Location = New Point(46, 81)
+        Label8.Margin = New Padding(4, 0, 4, 0)
         Label8.Name = "Label8"
-        Label8.Size = New Size(98, 15)
+        Label8.Size = New Size(147, 19)
         Label8.TabIndex = 16
         Label8.Text = "Nama Pelanggan"
         ' 
         ' TextBox5
         ' 
-        TextBox5.Location = New Point(136, 61)
+        TextBox5.Location = New Point(194, 77)
+        TextBox5.Margin = New Padding(4, 4, 4, 4)
         TextBox5.Name = "TextBox5"
-        TextBox5.Size = New Size(145, 23)
+        TextBox5.Size = New Size(205, 26)
         TextBox5.TabIndex = 15
         ' 
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Location = New Point(32, 32)
+        Label9.Location = New Point(46, 41)
+        Label9.Margin = New Padding(4, 0, 4, 0)
         Label9.Name = "Label9"
-        Label9.Size = New Size(77, 15)
+        Label9.Size = New Size(119, 19)
         Label9.TabIndex = 14
         Label9.Text = "ID Pelanggan"
         ' 
         ' TextBox6
         ' 
-        TextBox6.Location = New Point(136, 32)
+        TextBox6.Location = New Point(194, 41)
+        TextBox6.Margin = New Padding(4, 4, 4, 4)
         TextBox6.Name = "TextBox6"
-        TextBox6.Size = New Size(145, 23)
+        TextBox6.Size = New Size(205, 26)
         TextBox6.TabIndex = 13
         ' 
         ' DataGridView1
         ' 
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(47, 216)
+        DataGridView1.Location = New Point(67, 274)
+        DataGridView1.Margin = New Padding(4, 4, 4, 4)
         DataGridView1.Name = "DataGridView1"
-        DataGridView1.Size = New Size(523, 150)
+        DataGridView1.Size = New Size(747, 190)
         DataGridView1.TabIndex = 19
         ' 
-        ' TextBox2
+        ' btnkembali
         ' 
-        TextBox2.Location = New Point(347, 64)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(145, 23)
-        TextBox2.TabIndex = 22
+        btnkembali.Location = New Point(673, 215)
+        btnkembali.Margin = New Padding(4, 4, 4, 4)
+        btnkembali.Name = "btnkembali"
+        btnkembali.Size = New Size(143, 38)
+        btnkembali.TabIndex = 37
+        btnkembali.Text = "Kembali"
+        btnkembali.UseVisualStyleBackColor = True
         ' 
-        ' Label1
+        ' btncari
         ' 
-        Label1.AutoSize = True
-        Label1.Location = New Point(295, 64)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(36, 15)
-        Label1.TabIndex = 21
-        Label1.Text = "Email"
+        btncari.Location = New Point(370, 215)
+        btncari.Margin = New Padding(4, 4, 4, 4)
+        btncari.Name = "btncari"
+        btncari.Size = New Size(143, 38)
+        btncari.TabIndex = 36
+        btncari.Text = "Cari"
+        btncari.UseVisualStyleBackColor = True
+        ' 
+        ' btnhapus
+        ' 
+        btnhapus.Location = New Point(521, 215)
+        btnhapus.Margin = New Padding(4, 4, 4, 4)
+        btnhapus.Name = "btnhapus"
+        btnhapus.Size = New Size(143, 38)
+        btnhapus.TabIndex = 35
+        btnhapus.Text = "Hapus"
+        btnhapus.UseVisualStyleBackColor = True
+        ' 
+        ' btnedit
+        ' 
+        btnedit.Location = New Point(219, 215)
+        btnedit.Margin = New Padding(4, 4, 4, 4)
+        btnedit.Name = "btnedit"
+        btnedit.Size = New Size(143, 38)
+        btnedit.TabIndex = 34
+        btnedit.Text = "Edit"
+        btnedit.UseVisualStyleBackColor = True
+        ' 
+        ' btntambah
+        ' 
+        btntambah.Location = New Point(67, 215)
+        btntambah.Margin = New Padding(4, 4, 4, 4)
+        btntambah.Name = "btntambah"
+        btntambah.Size = New Size(143, 38)
+        btntambah.TabIndex = 33
+        btntambah.Text = "tambah"
+        btntambah.UseVisualStyleBackColor = True
         ' 
         ' laptop
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(10F, 19F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(621, 391)
+        BackColor = Color.FromArgb(CByte(52), CByte(76), CByte(100))
+        ClientSize = New Size(887, 495)
+        Controls.Add(btnkembali)
+        Controls.Add(btncari)
+        Controls.Add(btnhapus)
+        Controls.Add(btnedit)
+        Controls.Add(btntambah)
         Controls.Add(Label3)
-        Controls.Add(Button5)
-        Controls.Add(Button4)
-        Controls.Add(Button3)
-        Controls.Add(Button2)
-        Controls.Add(Button1)
         Controls.Add(GroupBox1)
         Controls.Add(DataGridView1)
+        Font = New Font("Stencil", 12F)
+        ForeColor = Color.FromArgb(CByte(87), CByte(166), CByte(161))
+        Margin = New Padding(4, 4, 4, 4)
         Name = "laptop"
         Text = "anggota"
         GroupBox1.ResumeLayout(False)
@@ -228,11 +251,6 @@ Partial Class laptop
     End Sub
 
     Friend WithEvents Label3 As Label
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label1 As Label
@@ -245,4 +263,9 @@ Partial Class laptop
     Friend WithEvents Label9 As Label
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents btnkembali As Button
+    Friend WithEvents btncari As Button
+    Friend WithEvents btnhapus As Button
+    Friend WithEvents btnedit As Button
+    Friend WithEvents btntambah As Button
 End Class
