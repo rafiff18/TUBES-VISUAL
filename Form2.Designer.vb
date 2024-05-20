@@ -46,6 +46,7 @@ Partial Class Form2
         btnhapus = New Button()
         btnedit = New Button()
         btntambah = New Button()
+        Button1 = New Button()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         GroupBox1.SuspendLayout()
         SuspendLayout()
@@ -53,7 +54,7 @@ Partial Class Form2
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Location = New Point(373, 122)
+        Label4.Location = New Point(367, 77)
         Label4.Margin = New Padding(4, 0, 4, 0)
         Label4.Name = "Label4"
         Label4.Size = New Size(56, 20)
@@ -98,7 +99,7 @@ Partial Class Form2
         ' 
         ' txtHargaSewa
         ' 
-        txtHargaSewa.Location = New Point(477, 81)
+        txtHargaSewa.Location = New Point(471, 36)
         txtHargaSewa.Margin = New Padding(4)
         txtHargaSewa.Name = "txtHargaSewa"
         txtHargaSewa.Size = New Size(188, 26)
@@ -108,7 +109,7 @@ Partial Class Form2
         ' 
         cbStatus.FormattingEnabled = True
         cbStatus.Items.AddRange(New Object() {"Tersedia", "Dipinjam"})
-        cbStatus.Location = New Point(477, 118)
+        cbStatus.Location = New Point(471, 73)
         cbStatus.Margin = New Padding(4)
         cbStatus.Name = "cbStatus"
         cbStatus.Size = New Size(188, 28)
@@ -117,7 +118,7 @@ Partial Class Form2
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(370, 87)
+        Label2.Location = New Point(364, 42)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
         Label2.Size = New Size(97, 20)
@@ -126,7 +127,7 @@ Partial Class Form2
         ' 
         ' txtKeterangan
         ' 
-        txtKeterangan.Location = New Point(477, 41)
+        txtKeterangan.Location = New Point(471, 109)
         txtKeterangan.Margin = New Padding(4)
         txtKeterangan.Name = "txtKeterangan"
         txtKeterangan.Size = New Size(188, 26)
@@ -135,7 +136,7 @@ Partial Class Form2
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(373, 44)
+        Label1.Location = New Point(367, 112)
         Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
         Label1.Size = New Size(92, 20)
@@ -279,12 +280,22 @@ Partial Class Form2
         btntambah.Text = "tambah"
         btntambah.UseVisualStyleBackColor = True
         ' 
+        ' Button1
+        ' 
+        Button1.Location = New Point(544, 523)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(75, 23)
+        Button1.TabIndex = 38
+        Button1.Text = "hps"
+        Button1.UseVisualStyleBackColor = True
+        ' 
         ' Form2
         ' 
         AutoScaleDimensions = New SizeF(9F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(52), CByte(76), CByte(100))
         ClientSize = New Size(833, 570)
+        Controls.Add(Button1)
         Controls.Add(btnkembali)
         Controls.Add(btncari)
         Controls.Add(btnhapus)
@@ -327,4 +338,5 @@ Partial Class Form2
     Friend WithEvents btnhapus As Button
     Friend WithEvents btnedit As Button
     Friend WithEvents btntambah As Button
+    Friend WithEvents Button1 As Button
 End Class

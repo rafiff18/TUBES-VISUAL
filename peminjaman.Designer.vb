@@ -31,14 +31,16 @@ Partial Class peminjaman
         Label3 = New Label()
         Label2 = New Label()
         Label1 = New Label()
-        TextBox1 = New TextBox()
-        TextBox3 = New TextBox()
+        txtlamapinjam = New TextBox()
+        txtnolaptop = New TextBox()
         Label7 = New Label()
         Label8 = New Label()
-        TextBox5 = New TextBox()
+        txtnopel = New TextBox()
         Label9 = New Label()
-        TextBox6 = New TextBox()
+        txtpinjam = New TextBox()
         DataGridView1 = New DataGridView()
+        Button1 = New Button()
+        MySqlCommand1 = New MySql.Data.MySqlClient.MySqlCommand()
         GroupBox1.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -46,7 +48,7 @@ Partial Class peminjaman
         ' btnkembali
         ' 
         btnkembali.Location = New Point(730, 253)
-        btnkembali.Margin = New Padding(4, 4, 4, 4)
+        btnkembali.Margin = New Padding(4)
         btnkembali.Name = "btnkembali"
         btnkembali.Size = New Size(143, 38)
         btnkembali.TabIndex = 32
@@ -56,7 +58,7 @@ Partial Class peminjaman
         ' btncari
         ' 
         btncari.Location = New Point(427, 253)
-        btncari.Margin = New Padding(4, 4, 4, 4)
+        btncari.Margin = New Padding(4)
         btncari.Name = "btncari"
         btncari.Size = New Size(143, 38)
         btncari.TabIndex = 31
@@ -66,7 +68,7 @@ Partial Class peminjaman
         ' btnhapus
         ' 
         btnhapus.Location = New Point(579, 253)
-        btnhapus.Margin = New Padding(4, 4, 4, 4)
+        btnhapus.Margin = New Padding(4)
         btnhapus.Name = "btnhapus"
         btnhapus.Size = New Size(143, 38)
         btnhapus.TabIndex = 30
@@ -76,7 +78,7 @@ Partial Class peminjaman
         ' btnedit
         ' 
         btnedit.Location = New Point(276, 253)
-        btnedit.Margin = New Padding(4, 4, 4, 4)
+        btnedit.Margin = New Padding(4)
         btnedit.Name = "btnedit"
         btnedit.Size = New Size(143, 38)
         btnedit.TabIndex = 29
@@ -86,7 +88,7 @@ Partial Class peminjaman
         ' btntambah
         ' 
         btntambah.Location = New Point(124, 253)
-        btntambah.Margin = New Padding(4, 4, 4, 4)
+        btntambah.Margin = New Padding(4)
         btntambah.Name = "btntambah"
         btntambah.Size = New Size(143, 38)
         btntambah.TabIndex = 28
@@ -98,17 +100,17 @@ Partial Class peminjaman
         GroupBox1.Controls.Add(Label3)
         GroupBox1.Controls.Add(Label2)
         GroupBox1.Controls.Add(Label1)
-        GroupBox1.Controls.Add(TextBox1)
-        GroupBox1.Controls.Add(TextBox3)
+        GroupBox1.Controls.Add(txtlamapinjam)
+        GroupBox1.Controls.Add(txtnolaptop)
         GroupBox1.Controls.Add(Label7)
         GroupBox1.Controls.Add(Label8)
-        GroupBox1.Controls.Add(TextBox5)
+        GroupBox1.Controls.Add(txtnopel)
         GroupBox1.Controls.Add(Label9)
-        GroupBox1.Controls.Add(TextBox6)
+        GroupBox1.Controls.Add(txtpinjam)
         GroupBox1.Location = New Point(74, 61)
-        GroupBox1.Margin = New Padding(4, 4, 4, 4)
+        GroupBox1.Margin = New Padding(4)
         GroupBox1.Name = "GroupBox1"
-        GroupBox1.Padding = New Padding(4, 4, 4, 4)
+        GroupBox1.Padding = New Padding(4)
         GroupBox1.Size = New Size(799, 176)
         GroupBox1.TabIndex = 27
         GroupBox1.TabStop = False
@@ -117,7 +119,7 @@ Partial Class peminjaman
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Location = New Point(384, 134)
+        Label3.Location = New Point(403, 134)
         Label3.Margin = New Padding(4, 0, 4, 0)
         Label3.Name = "Label3"
         Label3.Size = New Size(66, 19)
@@ -144,21 +146,21 @@ Partial Class peminjaman
         Label1.TabIndex = 20
         Label1.Text = "Lama Meminjam"
         ' 
-        ' TextBox1
+        ' txtlamapinjam
         ' 
-        TextBox1.Location = New Point(559, 84)
-        TextBox1.Margin = New Padding(4, 4, 4, 4)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(205, 26)
-        TextBox1.TabIndex = 19
+        txtlamapinjam.Location = New Point(559, 84)
+        txtlamapinjam.Margin = New Padding(4)
+        txtlamapinjam.Name = "txtlamapinjam"
+        txtlamapinjam.Size = New Size(205, 26)
+        txtlamapinjam.TabIndex = 19
         ' 
-        ' TextBox3
+        ' txtnolaptop
         ' 
-        TextBox3.Location = New Point(550, 43)
-        TextBox3.Margin = New Padding(4, 4, 4, 4)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(205, 26)
-        TextBox3.TabIndex = 18
+        txtnolaptop.Location = New Point(550, 43)
+        txtnolaptop.Margin = New Padding(4)
+        txtnolaptop.Name = "txtnolaptop"
+        txtnolaptop.Size = New Size(205, 26)
+        txtnolaptop.TabIndex = 18
         ' 
         ' Label7
         ' 
@@ -180,13 +182,13 @@ Partial Class peminjaman
         Label8.TabIndex = 16
         Label8.Text = "No Pelanggan"
         ' 
-        ' TextBox5
+        ' txtnopel
         ' 
-        TextBox5.Location = New Point(196, 84)
-        TextBox5.Margin = New Padding(4, 4, 4, 4)
-        TextBox5.Name = "TextBox5"
-        TextBox5.Size = New Size(205, 26)
-        TextBox5.TabIndex = 15
+        txtnopel.Location = New Point(196, 84)
+        txtnopel.Margin = New Padding(4)
+        txtnopel.Name = "txtnopel"
+        txtnopel.Size = New Size(205, 26)
+        txtnopel.TabIndex = 15
         ' 
         ' Label9
         ' 
@@ -198,22 +200,38 @@ Partial Class peminjaman
         Label9.TabIndex = 14
         Label9.Text = "No Peminjaman"
         ' 
-        ' TextBox6
+        ' txtpinjam
         ' 
-        TextBox6.Location = New Point(196, 47)
-        TextBox6.Margin = New Padding(4, 4, 4, 4)
-        TextBox6.Name = "TextBox6"
-        TextBox6.Size = New Size(205, 26)
-        TextBox6.TabIndex = 13
+        txtpinjam.Location = New Point(196, 47)
+        txtpinjam.Margin = New Padding(4)
+        txtpinjam.Name = "txtpinjam"
+        txtpinjam.Size = New Size(205, 26)
+        txtpinjam.TabIndex = 13
         ' 
         ' DataGridView1
         ' 
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridView1.Location = New Point(74, 310)
-        DataGridView1.Margin = New Padding(4, 4, 4, 4)
+        DataGridView1.Margin = New Padding(4)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.Size = New Size(799, 190)
         DataGridView1.TabIndex = 26
+        ' 
+        ' Button1
+        ' 
+        Button1.Location = New Point(707, 524)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(75, 23)
+        Button1.TabIndex = 33
+        Button1.Text = "Button1"
+        Button1.UseVisualStyleBackColor = True
+        ' 
+        ' MySqlCommand1
+        ' 
+        MySqlCommand1.CacheAge = 0
+        MySqlCommand1.Connection = Nothing
+        MySqlCommand1.EnableCaching = False
+        MySqlCommand1.Transaction = Nothing
         ' 
         ' peminjaman
         ' 
@@ -221,6 +239,7 @@ Partial Class peminjaman
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(52), CByte(76), CByte(100))
         ClientSize = New Size(949, 570)
+        Controls.Add(Button1)
         Controls.Add(btnkembali)
         Controls.Add(btncari)
         Controls.Add(btnhapus)
@@ -230,7 +249,7 @@ Partial Class peminjaman
         Controls.Add(DataGridView1)
         Font = New Font("Stencil", 12F)
         ForeColor = Color.FromArgb(CByte(87), CByte(166), CByte(161))
-        Margin = New Padding(4, 4, 4, 4)
+        Margin = New Padding(4)
         Name = "peminjaman"
         Text = "peminjaman"
         GroupBox1.ResumeLayout(False)
@@ -248,12 +267,14 @@ Partial Class peminjaman
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtlamapinjam As TextBox
+    Friend WithEvents txtnolaptop As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txtnopel As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents txtpinjam As TextBox
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Button1 As Button
+    Friend WithEvents MySqlCommand1 As MySql.Data.MySqlClient.MySqlCommand
 End Class

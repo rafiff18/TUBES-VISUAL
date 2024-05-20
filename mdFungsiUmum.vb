@@ -51,17 +51,17 @@ Module mdFungsiUmum
         End Try
     End Function
 
-    Public Function getViewTable(ByVal noLaptop As String) As DataTable
+    Public Function getViewLaptop(ByVal merkLaptop As String) As DataTable
         Dim myViewTable As DataTable
 
         Try
             bukaDB()
-            myCommand = New MySqlCommand("SELECT * FROM laptop WHERE noLaptop = @noLaptop", db)
-            myCommand.Parameters.AddWithValue("@noLaptop", noLaptop)
+            myCommand = New MySqlCommand("SELECT * FROM laptop WHERE merkLaptop = @merkLaptop", db)
+            myCommand.Parameters.AddWithValue("@merkLaptop", merkLaptop)
             myAdapter = New MySqlDataAdapter(myCommand)
             myDataset = New DataSet
 
-            myAdapter.Fill(myDataset, "noLaptop")
+            myAdapter.Fill(myDataset, "merkLaptop")
             myViewTable = myDataset.Tables(0)
             Return (myViewTable)
 
@@ -75,10 +75,10 @@ Module mdFungsiUmum
         End Try
     End Function
 
-    Public Sub tambah_menu(ByVal laptop As String, ByVal noLaptop As String, ByVal merkLaptop As String, ByVal seriLaptop As String, ByVal tipeLaptop As String, ByVal hargaSewa As String, ByVal statusLaptop As String, ByVal keteranganLaptop As String)
+    Public Sub tambah_menu_laptop(ByVal noLaptop As String, ByVal merkLaptop As String, ByVal seriLaptop As String, ByVal tipeLaptop As String, ByVal hargaSewa As String, ByVal statusLaptop As String, ByVal keteranganLaptop As String)
         myCommand = New MySqlCommand
         myCommand.Connection = db
-        myCommand.CommandText = "INSERT INTO buku (noLaptop, merkLaptop, seriLaptop, tipeLaptop, hargaSewa, statusLaptop, keteranganLaptop) VALUES (@noLaptop, @merkLaptop, @, @seriLaptop, @tipeLaptop, @hargaSewa, @statusLaptop, @keteranganLaptop)"
+        myCommand.CommandText = "INSERT INTO laptop (noLaptop, merkLaptop, seriLaptop, tipeLaptop, hargaSewa, statusLaptop,keteranganLaptop) VALUES (@noLaptop, @merkLaptop, @seriLaptop, @tipeLaptop,@hargaSewa, @statusLaptop, @keteranganLaptop)"
         myCommand.Parameters.AddWithValue("@noLaptop", noLaptop)
         myCommand.Parameters.AddWithValue("@merkLaptop", merkLaptop)
         myCommand.Parameters.AddWithValue("@seriLaptop", seriLaptop)
@@ -103,7 +103,7 @@ Module mdFungsiUmum
         End Try
     End Sub
 
-    Public Sub hapus_menu(ByVal noLaptop As String)
+    Public Sub hapus_menu_laptop(ByVal noLaptop As String)
         myCommand = New MySqlCommand
         myCommand.Connection = db
         myCommand.CommandText = "DELETE FROM laptop WHERE noLaptop = @noLaptop"
@@ -138,10 +138,10 @@ Module mdFungsiUmum
         End With
     End Sub
 
-    Public Sub ubah_menu(ByVal laptop As String, ByVal noLaptop As String, ByVal merkLaptop As String, ByVal seriLaptop As String, ByVal tipeLaptop As String, ByVal hargaSewa As String, ByVal statusLaptop As String, ByVal keteranganLaptop As String)
+    Public Sub ubah_menu_laptop(ByVal noLaptop As String, ByVal merkLaptop As String, ByVal seriLaptop As String, ByVal tipeLaptop As String, ByVal hargaSewa As String, ByVal statusLaptop As String, ByVal keteranganLaptop As String)
         myCommand = New MySqlCommand
         myCommand.Connection = db
-        myCommand.CommandText = "UPDATE laptop SET merkLaptop = @merkLaptop, seriLaptop = @seriLaptop, tipeLaptop = @tipeLaptop, hargaSewa = @hargaSewa, statusLaptop = @statusLaptop WHERE noLaptop = @noLaptop"
+        myCommand.CommandText = "UPDATE laptop SET merkLaptop = @merkLaptop, seriLaptop = @seriLaptop, tipeLaptop = @tipeLaptop, hargaSewa = @hargaSewa, statusLaptop = @statusLaptop,keteranganLaptop = @keteranganLaptop WHERE noLaptop = @noLaptop"
         myCommand.Parameters.AddWithValue("@noLaptop", noLaptop)
         myCommand.Parameters.AddWithValue("@merkLaptop", merkLaptop)
         myCommand.Parameters.AddWithValue("@seriLaptop", seriLaptop)
@@ -167,17 +167,17 @@ Module mdFungsiUmum
     End Sub
 #End Region
 
-#Region "Anggota"
-    Public Function getTabelAnggota() As DataTable
+#Region "pelanggan"
+    Public Function getTabelPelanggan() As DataTable
         Dim myDataTable As DataTable
 
         Try
             bukaDB()
-            myCommand = New MySqlCommand("SELECT * FROM anggota ORDER BY noanggota", db)
+            myCommand = New MySqlCommand("SELECT * FROM pelanggan ORDER BY noPelanggan", db)
             myAdapter = New MySqlDataAdapter(myCommand)
             myDataset = New DataSet
 
-            myAdapter.Fill(myDataset, "noanggota")
+            myAdapter.Fill(myDataset, "noPelanggan")
             myDataTable = myDataset.Tables(0)
             Return (myDataTable)
 
@@ -191,17 +191,17 @@ Module mdFungsiUmum
         End Try
     End Function
 
-    Public Function getViewAnggota(ByVal nama As String) As DataTable
+    Public Function getViewPelanggan(ByVal namaPelanggan As String) As DataTable
         Dim myViewTable As DataTable
 
         Try
             bukaDB()
-            myCommand = New MySqlCommand("SELECT * FROM anggota WHERE nama = @nama", db)
-            myCommand.Parameters.AddWithValue("@nama", nama)
+            myCommand = New MySqlCommand("SELECT * FROM pelanggan WHERE namaPelanggan = @namaPelanggan", db)
+            myCommand.Parameters.AddWithValue("@namaPelanggan", namaPelanggan)
             myAdapter = New MySqlDataAdapter(myCommand)
             myDataset = New DataSet
 
-            myAdapter.Fill(myDataset, "noanggota")
+            myAdapter.Fill(myDataset, "noPelanggan")
             myViewTable = myDataset.Tables(0)
             Return (myViewTable)
 
@@ -215,16 +215,16 @@ Module mdFungsiUmum
         End Try
     End Function
 
-    Public Sub tambah_menu2(ByVal nama As String, ByVal nim As String, ByVal alamat As String, ByVal kota As String, ByVal telepon As String, ByVal keterangan As String)
+    Public Sub tambah_menu_pelanggan(ByVal noPelanggan As String, ByVal namaPelanggan As String, ByVal alamatPelanggan As String, ByVal noTelpPelanggan As String, ByVal emailPelanggan As String)
         myCommand = New MySqlCommand
         myCommand.Connection = db
-        myCommand.CommandText = "INSERT INTO anggota (nama, nim, alamat, kota, telepon, keterangan) VALUES (@nama, @nim, @alamat, @kota, @telepon, @keterangan)"
-        myCommand.Parameters.AddWithValue("@nama", nama)
-        myCommand.Parameters.AddWithValue("@nim", nim)
-        myCommand.Parameters.AddWithValue("@alamat", alamat)
-        myCommand.Parameters.AddWithValue("@kota", kota)
-        myCommand.Parameters.AddWithValue("@telepon", telepon)
-        myCommand.Parameters.AddWithValue("@keterangan", keterangan)
+        myCommand.CommandText = "INSERT INTO pelanggan (noPelanggan, namaPelanggan, alamatPelanggan, noTelpPelanggan, emailPelanggan) 
+                                    VALUES (@noPelanggan, @namaPelanggan, @alamatPelanggan, @noTelpPelanggan, @emailPelanggan)"
+        myCommand.Parameters.AddWithValue("@noPelanggan", noPelanggan)
+        myCommand.Parameters.AddWithValue("@namaPelanggan", namaPelanggan)
+        myCommand.Parameters.AddWithValue("@alamatPelanggan", alamatPelanggan)
+        myCommand.Parameters.AddWithValue("@noTelpPelanggan", noTelpPelanggan)
+        myCommand.Parameters.AddWithValue("@emailPelanggan", emailPelanggan)
 
         Try
             bukaDB()
@@ -242,17 +242,16 @@ Module mdFungsiUmum
         End Try
     End Sub
 
-    Public Sub hapus_menu2(ByVal nama As String)
+    Public Sub hapus_menu_pelanggan(ByVal noPelanggan As String)
         myCommand = New MySqlCommand
         myCommand.Connection = db
-        myCommand.CommandText = "DELETE FROM anggota WHERE nama = @nama"
-        myCommand.Parameters.AddWithValue("@nama", nama)
+        myCommand.CommandText = "DELETE FROM pelanggan WHERE noPelanggan = @noPelanggan"
+        myCommand.Parameters.AddWithValue("@noPelanggan", noPelanggan)
 
         Try
             bukaDB()
             myCommand.ExecuteNonQuery()
             MsgBox("Data berhasil di hapus")
-            bersih_menu2()
             tutupDB()
 
         Catch ex As Exception
@@ -265,29 +264,25 @@ Module mdFungsiUmum
         End Try
     End Sub
 
-    Public Sub bersih_menu2()
-        'With laptop
-        '.LabelAnggota.Text = "0"
-        '.txtNama.Text = ""
-        '.txtNim.Text = ""
-        '.txtAlamat.Text = ""
-        '.txtKota.Text = ""
-        '.txtTelepon.Text = ""
-        '.txtKeterangan.Text = ""
-        'End With
+    Public Sub bersih_menu_pelanggan()
+        With pelanggan
+            .txtnopel.Text = ""
+            .txtnama.Text = ""
+            .txtalamat.Text = ""
+            .txttelp.Text = ""
+            .txtemail.Text = ""
+        End With
     End Sub
 
-    Public Sub ubah_menu2(ByVal noanggota As Integer, ByVal nama As String, ByVal nim As String, ByVal alamat As String, ByVal kota As String, ByVal telepon As String, ByVal keterangan As String)
+    Public Sub ubah_menu_pelanggan(ByVal noPelanggan As String, ByVal namaPelanggan As String, ByVal alamatPelanggan As String, ByVal noTelpPelanggan As String, ByVal emailPelanggan As String)
         myCommand = New MySqlCommand
         myCommand.Connection = db
-        myCommand.CommandText = "UPDATE anggota SET nama = @nama, nim = @nim, alamat = @alamat, kota = @kota, telepon = @telepon, keterangan = @keterangan WHERE noanggota = @noanggota"
-        myCommand.Parameters.AddWithValue("@noanggota", noanggota)
-        myCommand.Parameters.AddWithValue("@nama", nama)
-        myCommand.Parameters.AddWithValue("@nim", nim)
-        myCommand.Parameters.AddWithValue("@alamat", alamat)
-        myCommand.Parameters.AddWithValue("@kota", kota)
-        myCommand.Parameters.AddWithValue("@telepon", telepon)
-        myCommand.Parameters.AddWithValue("@keterangan", keterangan)
+        myCommand.CommandText = "UPDATE pelanggan SET namaPelanggan = @namaPelanggan, alamatPelanggan = @alamatPelanggan, noTelpPelanggan = @noTelpPelanggan, emailPelanggan = @emailPelanggan WHERE noPelanggan = @noPelanggan"
+        myCommand.Parameters.AddWithValue("@noPelanggan", noPelanggan)
+        myCommand.Parameters.AddWithValue("@namaPelanggan", namaPelanggan)
+        myCommand.Parameters.AddWithValue("@alamatPelanggan", alamatPelanggan)
+        myCommand.Parameters.AddWithValue("@noTelpPelanggan", noTelpPelanggan)
+        myCommand.Parameters.AddWithValue("@emailPelanggan", emailPelanggan)
 
         Try
             bukaDB()
@@ -312,11 +307,12 @@ Module mdFungsiUmum
 
         Try
             bukaDB()
-            myCommand = New MySqlCommand("SELECT p.notransaksi, a.nama, b.judul, p.tanggalpinjam FROM peminjaman p, anggota a, buku b WHERE a.noanggota = p.noanggota AND b.nobuku = p.nobuku ORDER BY notransaksi", db)
+            myCommand = New MySqlCommand("SELECT p.noPeminjaman, a.namaPelanggan, b.merkLaptop, p.lamaMeminjam FROM peminjaman p, pelanggan a, laptop b WHERE a.noPelanggan = p.noPelanggan AND b.noLaptop = p.noLaptop ORDER BY p.noPeminjaman", db)
+            myAdapter = New MySqlDataAdapter(myCommand)
             myAdapter = New MySqlDataAdapter(myCommand)
             myDataset = New DataSet
 
-            myAdapter.Fill(myDataset, "notransaksi")
+            myAdapter.Fill(myDataset, "noPeminjaman")
             myDataTable = myDataset.Tables(0)
             Return (myDataTable)
 
@@ -330,18 +326,18 @@ Module mdFungsiUmum
         End Try
     End Function
 
-    Public Function getViewPinjam(ByVal notransaksi As String) As DataTable
+    Public Function getViewPinjam(ByVal noPeminjaman As String) As DataTable
         Dim myViewTable As DataTable
 
         Try
             bukaDB()
 
-            myCommand = New MySqlCommand("p.notransaksi, a.nama, b.nama, p.tanggalpinjam, p.keterangan FROM peminjaman p, anggota a, buku b WHERE b.nobuku = p.nobuku AND a.noanggota = p.noanggota AND notransaksi = @notransaksi", db)
-            myCommand.Parameters.AddWithValue("@notransaksi", notransaksi)
+            myCommand = New MySqlCommand("SELECT p.noPeminjaman, a.namaPelanggan, b.merkLaptop , p.lamaMeminjam FROM peminjaman p, pelanggan a, laptop b WHERE b.noLaptop = p.noLaptop AND a.noPelanggan = p.noPelanggan AND noPeminjaman = @noPeminjaman", db)
+            myCommand.Parameters.AddWithValue("@noPeminjaman", noPeminjaman)
             myAdapter = New MySqlDataAdapter(myCommand)
             myDataset = New DataSet
 
-            myAdapter.Fill(myDataset, "notransaksi")
+            myAdapter.Fill(myDataset, "noPeminjaman")
             myViewTable = myDataset.Tables(0)
             Return (myViewTable)
 
@@ -355,14 +351,14 @@ Module mdFungsiUmum
         End Try
     End Function
 
-    Public Sub tambah_menu3(ByVal notransaksi As String, ByVal noanggota As String, ByVal nobuku As String, ByVal tanggalpinjam As Date)
+    Public Sub tambah_menu_pinjam(ByVal noPeminjaman As String, ByVal noPelanggan As String, ByVal noLaptop As String, ByVal lamaMeminjam As String)
         myCommand = New MySqlCommand
         myCommand.Connection = db
-        myCommand.CommandText = "INSERT INTO peminjaman (notransaksi, noanggota, nobuku, tanggalpinjam) VALUES (@notransaksi, @noanggota, @nobuku, @tanggalpinjam)"
-        myCommand.Parameters.AddWithValue("@notransaksi", notransaksi)
-        myCommand.Parameters.AddWithValue("@noanggota", noanggota)
-        myCommand.Parameters.AddWithValue("@tanggalpinjam", tanggalpinjam)
-        myCommand.Parameters.AddWithValue("@nobuku", nobuku)
+        myCommand.CommandText = "INSERT INTO peminjaman (noPeminjaman, noPelanggan, noLaptop, lamaMeminjam) VALUES (@noPeminjaman, @noPelanggan, @noLaptop, @lamaMeminjam)"
+        myCommand.Parameters.AddWithValue("@noPeminjaman", noPeminjaman)
+        myCommand.Parameters.AddWithValue("@noPelanggan", noPelanggan)
+        myCommand.Parameters.AddWithValue("@noLaptop", noLaptop)
+        myCommand.Parameters.AddWithValue("@lamaMeminjam", lamaMeminjam)
 
         Try
             bukaDB()
@@ -380,17 +376,16 @@ Module mdFungsiUmum
         End Try
     End Sub
 
-    Public Sub hapus_menu3(ByVal notransaksi As String)
+    Public Sub hapus_menu_pinjam(ByVal noPeminjaman As String)
         myCommand = New MySqlCommand
         myCommand.Connection = db
-        myCommand.CommandText = "DELETE FROM peminjaman WHERE notransaksi = @notransaksi"
-        myCommand.Parameters.AddWithValue("@notransaksi", notransaksi)
+        myCommand.CommandText = "DELETE FROM peminjaman WHERE noPeminjaman = @noPeminjaman"
+        myCommand.Parameters.AddWithValue("@noPeminjaman", noPeminjaman)
 
         Try
             bukaDB()
             myCommand.ExecuteNonQuery()
             MsgBox("Data berhasil di hapus")
-            bersih_menu2()
             tutupDB()
 
         Catch ex As Exception
@@ -403,22 +398,23 @@ Module mdFungsiUmum
         End Try
     End Sub
 
-    Public Sub bersih_menu3()
-        'With MPinjam
-        '.txt'NoTransaksi.Text = ""
-        '.tx'tAnggota.Text = ""
-        '.txt'Buku.Text = ""
-        'End With
+    Public Sub bersih_menu_peminjaman()
+        With peminjaman
+            .txtpinjam.Text = ""
+            .txtnopel.Text = ""
+            .txtnolaptop.Text = ""
+            .txtlamapinjam.Text = ""
+        End With
     End Sub
 
-    Public Sub ubah_menu3(ByVal notransaksi As String, ByVal noanggota As String, ByVal nobuku As String, ByVal tanggalpinjam As Date)
+    Public Sub ubah_menu_peminjaman(ByVal noPeminjaman As String, ByVal noPelanggan As String, ByVal noLaptop As String, ByVal lamaMeminjam As String)
         myCommand = New MySqlCommand
         myCommand.Connection = db
-        myCommand.CommandText = "UPDATE peminjaman SET noanggota = @noanggota, nobuku = @nobuku, tanggalpinjam = @tanggalpinjam WHERE notransaksi = @notransaksi"
-        myCommand.Parameters.AddWithValue("@notransaksi", notransaksi)
-        myCommand.Parameters.AddWithValue("@noanggota", noanggota)
-        myCommand.Parameters.AddWithValue("@tanggalpinjam", tanggalpinjam)
-        myCommand.Parameters.AddWithValue("@nobuku", nobuku)
+        myCommand.CommandText = "UPDATE peminjaman SET  noPelanggan = @noPelanggan, noLaptop = @noLaptop, lamaMeminjam = @lamaMeminjam WHERE noPeminjaman = @noPeminjaman"
+        myCommand.Parameters.AddWithValue("@noPeminjaman", noPeminjaman)
+        myCommand.Parameters.AddWithValue("@noPelanggan", noPelanggan)
+        myCommand.Parameters.AddWithValue("@noLaptop", noLaptop)
+        myCommand.Parameters.AddWithValue("@lamaMeminjam", lamaMeminjam)
 
         Try
             bukaDB()

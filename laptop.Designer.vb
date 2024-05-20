@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class laptop
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class pelanggan
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,26 +20,27 @@ Partial Class laptop
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Label3 = New Label()
         GroupBox1 = New GroupBox()
-        TextBox2 = New TextBox()
+        txtemail = New TextBox()
         Label1 = New Label()
-        TextBox1 = New TextBox()
+        txttelp = New TextBox()
         Label6 = New Label()
-        TextBox3 = New TextBox()
+        txtalamat = New TextBox()
         Label7 = New Label()
         Label8 = New Label()
-        TextBox5 = New TextBox()
+        txtnama = New TextBox()
         Label9 = New Label()
-        TextBox6 = New TextBox()
+        txtnopel = New TextBox()
         DataGridView1 = New DataGridView()
         btnkembali = New Button()
         btncari = New Button()
         btnhapus = New Button()
         btnedit = New Button()
         btntambah = New Button()
+        Button1 = New Button()
         GroupBox1.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -56,32 +57,32 @@ Partial Class laptop
         ' 
         ' GroupBox1
         ' 
-        GroupBox1.Controls.Add(TextBox2)
+        GroupBox1.Controls.Add(txtemail)
         GroupBox1.Controls.Add(Label1)
-        GroupBox1.Controls.Add(TextBox1)
+        GroupBox1.Controls.Add(txttelp)
         GroupBox1.Controls.Add(Label6)
-        GroupBox1.Controls.Add(TextBox3)
+        GroupBox1.Controls.Add(txtalamat)
         GroupBox1.Controls.Add(Label7)
         GroupBox1.Controls.Add(Label8)
-        GroupBox1.Controls.Add(TextBox5)
+        GroupBox1.Controls.Add(txtnama)
         GroupBox1.Controls.Add(Label9)
-        GroupBox1.Controls.Add(TextBox6)
+        GroupBox1.Controls.Add(txtnopel)
         GroupBox1.Location = New Point(67, 20)
-        GroupBox1.Margin = New Padding(4, 4, 4, 4)
+        GroupBox1.Margin = New Padding(4)
         GroupBox1.Name = "GroupBox1"
-        GroupBox1.Padding = New Padding(4, 4, 4, 4)
+        GroupBox1.Padding = New Padding(4)
         GroupBox1.Size = New Size(747, 176)
         GroupBox1.TabIndex = 20
         GroupBox1.TabStop = False
         GroupBox1.Text = "data Pelanggan"
         ' 
-        ' TextBox2
+        ' txtemail
         ' 
-        TextBox2.Location = New Point(496, 81)
-        TextBox2.Margin = New Padding(4, 4, 4, 4)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(205, 26)
-        TextBox2.TabIndex = 22
+        txtemail.Location = New Point(496, 81)
+        txtemail.Margin = New Padding(4)
+        txtemail.Name = "txtemail"
+        txtemail.Size = New Size(205, 26)
+        txtemail.TabIndex = 22
         ' 
         ' Label1
         ' 
@@ -93,13 +94,13 @@ Partial Class laptop
         Label1.TabIndex = 21
         Label1.Text = "Email"
         ' 
-        ' TextBox1
+        ' txttelp
         ' 
-        TextBox1.Location = New Point(496, 41)
-        TextBox1.Margin = New Padding(4, 4, 4, 4)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(205, 26)
-        TextBox1.TabIndex = 20
+        txttelp.Location = New Point(496, 41)
+        txttelp.Margin = New Padding(4)
+        txttelp.Name = "txttelp"
+        txttelp.Size = New Size(205, 26)
+        txttelp.TabIndex = 20
         ' 
         ' Label6
         ' 
@@ -111,13 +112,13 @@ Partial Class laptop
         Label6.TabIndex = 19
         Label6.Text = "No Telp"
         ' 
-        ' TextBox3
+        ' txtalamat
         ' 
-        TextBox3.Location = New Point(194, 114)
-        TextBox3.Margin = New Padding(4, 4, 4, 4)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(205, 26)
-        TextBox3.TabIndex = 18
+        txtalamat.Location = New Point(194, 114)
+        txtalamat.Margin = New Padding(4)
+        txtalamat.Name = "txtalamat"
+        txtalamat.Size = New Size(205, 26)
+        txtalamat.TabIndex = 18
         ' 
         ' Label7
         ' 
@@ -139,13 +140,13 @@ Partial Class laptop
         Label8.TabIndex = 16
         Label8.Text = "Nama Pelanggan"
         ' 
-        ' TextBox5
+        ' txtnama
         ' 
-        TextBox5.Location = New Point(194, 77)
-        TextBox5.Margin = New Padding(4, 4, 4, 4)
-        TextBox5.Name = "TextBox5"
-        TextBox5.Size = New Size(205, 26)
-        TextBox5.TabIndex = 15
+        txtnama.Location = New Point(194, 77)
+        txtnama.Margin = New Padding(4)
+        txtnama.Name = "txtnama"
+        txtnama.Size = New Size(205, 26)
+        txtnama.TabIndex = 15
         ' 
         ' Label9
         ' 
@@ -157,19 +158,19 @@ Partial Class laptop
         Label9.TabIndex = 14
         Label9.Text = "ID Pelanggan"
         ' 
-        ' TextBox6
+        ' txtnopel
         ' 
-        TextBox6.Location = New Point(194, 41)
-        TextBox6.Margin = New Padding(4, 4, 4, 4)
-        TextBox6.Name = "TextBox6"
-        TextBox6.Size = New Size(205, 26)
-        TextBox6.TabIndex = 13
+        txtnopel.Location = New Point(194, 41)
+        txtnopel.Margin = New Padding(4)
+        txtnopel.Name = "txtnopel"
+        txtnopel.Size = New Size(205, 26)
+        txtnopel.TabIndex = 13
         ' 
         ' DataGridView1
         ' 
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridView1.Location = New Point(67, 274)
-        DataGridView1.Margin = New Padding(4, 4, 4, 4)
+        DataGridView1.Margin = New Padding(4)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.Size = New Size(747, 190)
         DataGridView1.TabIndex = 19
@@ -177,7 +178,7 @@ Partial Class laptop
         ' btnkembali
         ' 
         btnkembali.Location = New Point(673, 215)
-        btnkembali.Margin = New Padding(4, 4, 4, 4)
+        btnkembali.Margin = New Padding(4)
         btnkembali.Name = "btnkembali"
         btnkembali.Size = New Size(143, 38)
         btnkembali.TabIndex = 37
@@ -187,7 +188,7 @@ Partial Class laptop
         ' btncari
         ' 
         btncari.Location = New Point(370, 215)
-        btncari.Margin = New Padding(4, 4, 4, 4)
+        btncari.Margin = New Padding(4)
         btncari.Name = "btncari"
         btncari.Size = New Size(143, 38)
         btncari.TabIndex = 36
@@ -197,7 +198,7 @@ Partial Class laptop
         ' btnhapus
         ' 
         btnhapus.Location = New Point(521, 215)
-        btnhapus.Margin = New Padding(4, 4, 4, 4)
+        btnhapus.Margin = New Padding(4)
         btnhapus.Name = "btnhapus"
         btnhapus.Size = New Size(143, 38)
         btnhapus.TabIndex = 35
@@ -207,7 +208,7 @@ Partial Class laptop
         ' btnedit
         ' 
         btnedit.Location = New Point(219, 215)
-        btnedit.Margin = New Padding(4, 4, 4, 4)
+        btnedit.Margin = New Padding(4)
         btnedit.Name = "btnedit"
         btnedit.Size = New Size(143, 38)
         btnedit.TabIndex = 34
@@ -217,19 +218,29 @@ Partial Class laptop
         ' btntambah
         ' 
         btntambah.Location = New Point(67, 215)
-        btntambah.Margin = New Padding(4, 4, 4, 4)
+        btntambah.Margin = New Padding(4)
         btntambah.Name = "btntambah"
         btntambah.Size = New Size(143, 38)
         btntambah.TabIndex = 33
         btntambah.Text = "tambah"
         btntambah.UseVisualStyleBackColor = True
         ' 
-        ' laptop
+        ' Button1
         ' 
-        AutoScaleDimensions = New SizeF(10F, 19F)
+        Button1.Location = New Point(719, 466)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(75, 23)
+        Button1.TabIndex = 38
+        Button1.Text = "Button1"
+        Button1.UseVisualStyleBackColor = True
+        ' 
+        ' pelanggan
+        ' 
+        AutoScaleDimensions = New SizeF(10.0F, 19.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(52), CByte(76), CByte(100))
         ClientSize = New Size(887, 495)
+        Controls.Add(Button1)
         Controls.Add(btnkembali)
         Controls.Add(btncari)
         Controls.Add(btnhapus)
@@ -238,11 +249,11 @@ Partial Class laptop
         Controls.Add(Label3)
         Controls.Add(GroupBox1)
         Controls.Add(DataGridView1)
-        Font = New Font("Stencil", 12F)
+        Font = New Font("Stencil", 12.0F)
         ForeColor = Color.FromArgb(CByte(87), CByte(166), CByte(161))
-        Margin = New Padding(4, 4, 4, 4)
-        Name = "laptop"
-        Text = "anggota"
+        Margin = New Padding(4)
+        Name = "pelanggan"
+        Text = "pelanggan"
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
@@ -252,20 +263,21 @@ Partial Class laptop
 
     Friend WithEvents Label3 As Label
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtemail As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txttelp As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtalamat As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txtnama As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents txtnopel As TextBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents btnkembali As Button
     Friend WithEvents btncari As Button
     Friend WithEvents btnhapus As Button
     Friend WithEvents btnedit As Button
     Friend WithEvents btntambah As Button
+    Friend WithEvents Button1 As Button
 End Class
