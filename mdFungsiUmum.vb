@@ -2,6 +2,7 @@
 Imports MySql.Data.MySqlClient
 
 Module mdFungsiUmum
+#Region "Database"
     Public str As String = "server=localhost;user id=root;password=;database=rentallaptop;"
     Public db As New MySqlConnection(str)
     Public myCommand As MySqlCommand
@@ -9,7 +10,6 @@ Module mdFungsiUmum
     Public myDataset As DataSet
     Public myReader As MySqlDataReader
 
-#Region "Database"
     Public Sub bukaDB()
         Try
             tutupDB()
@@ -25,6 +25,35 @@ Module mdFungsiUmum
             db.Close()
         End If
     End Sub
+#End Region
+
+#Region "Login"
+    Public Function AuthenticateUser(ByVal username As String, ByVal password As String) As String
+        Try
+            If db.State <> ConnectionState.Open Then
+                db.Open()
+            End If
+
+            Dim query As String = "SELECT * FROM Users WHERE username=@username AND password=@password"
+            Using cmd As New MySqlCommand(query, db)
+                cmd.Parameters.AddWithValue("@username", username)
+                cmd.Parameters.AddWithValue("@password", password)
+
+                Dim reader As MySqlDataReader = cmd.ExecuteReader()
+                If reader.HasRows Then
+                    reader.Read()
+                    Return reader("role").ToString()
+                Else
+                    Return ""
+                End If
+            End Using
+        Catch ex As Exception
+            MsgBox("Error: " & ex.Message)
+            Return ""
+        Finally
+            tutupDB()
+        End Try
+    End Function
 #End Region
 
 #Region "Laptop"
@@ -431,6 +460,34 @@ Module mdFungsiUmum
 
         End Try
     End Sub
+
+    Public Function HitungTotalHarga(ByVal noLaptop As String, ByVal lamaMeminjam As Integer) As Decimal
+        Dim hargaSewa As Decimal
+
+        Try
+            bukaDB()
+            myCommand = New MySqlCommand("SELECT hargaSewa FROM laptop WHERE noLaptop = @noLaptop", db)
+            myCommand.Parameters.AddWithValue("@noLaptop", noLaptop)
+            myReader = myCommand.ExecuteReader()
+
+            If myReader.Read() Then
+                hargaSewa = Convert.ToDecimal(myReader("hargaSewa"))
+            Else
+                Throw New Exception("Laptop tidak ditemukan")
+            End If
+
+            myReader.Close()
+            Return hargaSewa * lamaMeminjam
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return 0
+
+        Finally
+            tutupDB()
+
+        End Try
+    End Function
 #End Region
 
 End Module
