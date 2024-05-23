@@ -14,6 +14,7 @@
 
     Private Sub btnkembali_Click(sender As Object, e As EventArgs) Handles btnkembali.Click
         Me.Close()
+        Form1.Show()
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load

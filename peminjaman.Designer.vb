@@ -28,7 +28,7 @@ Partial Class peminjaman
         btnedit = New Button()
         btntambah = New Button()
         GroupBox1 = New GroupBox()
-        Label3 = New Label()
+        lblHarga = New Label()
         Label2 = New Label()
         Label1 = New Label()
         txtlamapinjam = New TextBox()
@@ -97,7 +97,7 @@ Partial Class peminjaman
         ' 
         ' GroupBox1
         ' 
-        GroupBox1.Controls.Add(Label3)
+        GroupBox1.Controls.Add(lblHarga)
         GroupBox1.Controls.Add(Label2)
         GroupBox1.Controls.Add(Label1)
         GroupBox1.Controls.Add(txtlamapinjam)
@@ -116,15 +116,15 @@ Partial Class peminjaman
         GroupBox1.TabStop = False
         GroupBox1.Text = "data Peminjaman"
         ' 
-        ' Label3
+        ' lblHarga
         ' 
-        Label3.AutoSize = True
-        Label3.Location = New Point(403, 134)
-        Label3.Margin = New Padding(4, 0, 4, 0)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(66, 19)
-        Label3.TabIndex = 22
-        Label3.Text = "Label3"
+        lblHarga.AutoSize = True
+        lblHarga.Location = New Point(403, 134)
+        lblHarga.Margin = New Padding(4, 0, 4, 0)
+        lblHarga.Name = "lblHarga"
+        lblHarga.Size = New Size(57, 20)
+        lblHarga.TabIndex = 22
+        lblHarga.Text = "Label3"
         ' 
         ' Label2
         ' 
@@ -132,7 +132,7 @@ Partial Class peminjaman
         Label2.Location = New Point(271, 134)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(124, 19)
+        Label2.Size = New Size(100, 20)
         Label2.TabIndex = 21
         Label2.Text = "Total Harga :"
         ' 
@@ -142,7 +142,7 @@ Partial Class peminjaman
         Label1.Location = New Point(411, 87)
         Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(139, 19)
+        Label1.Size = New Size(125, 20)
         Label1.TabIndex = 20
         Label1.Text = "Lama Meminjam"
         ' 
@@ -168,7 +168,7 @@ Partial Class peminjaman
         Label7.Location = New Point(430, 47)
         Label7.Margin = New Padding(4, 0, 4, 0)
         Label7.Name = "Label7"
-        Label7.Size = New Size(93, 19)
+        Label7.Size = New Size(83, 20)
         Label7.TabIndex = 17
         Label7.Text = "No Laptop"
         ' 
@@ -178,7 +178,7 @@ Partial Class peminjaman
         Label8.Location = New Point(47, 87)
         Label8.Margin = New Padding(4, 0, 4, 0)
         Label8.Name = "Label8"
-        Label8.Size = New Size(124, 19)
+        Label8.Size = New Size(109, 20)
         Label8.TabIndex = 16
         Label8.Text = "No Pelanggan"
         ' 
@@ -196,7 +196,7 @@ Partial Class peminjaman
         Label9.Location = New Point(47, 47)
         Label9.Margin = New Padding(4, 0, 4, 0)
         Label9.Name = "Label9"
-        Label9.Size = New Size(136, 19)
+        Label9.Size = New Size(120, 20)
         Label9.TabIndex = 14
         Label9.Text = "No Peminjaman"
         ' 
@@ -235,7 +235,7 @@ Partial Class peminjaman
         ' 
         ' peminjaman
         ' 
-        AutoScaleDimensions = New SizeF(10F, 19F)
+        AutoScaleDimensions = New SizeF(9F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(52), CByte(76), CByte(100))
         ClientSize = New Size(949, 570)
@@ -247,7 +247,7 @@ Partial Class peminjaman
         Controls.Add(btntambah)
         Controls.Add(GroupBox1)
         Controls.Add(DataGridView1)
-        Font = New Font("Stencil", 12F)
+        Font = New Font("Microsoft Sans Serif", 12F)
         ForeColor = Color.FromArgb(CByte(87), CByte(166), CByte(161))
         Margin = New Padding(4)
         Name = "peminjaman"
@@ -264,7 +264,7 @@ Partial Class peminjaman
     Friend WithEvents btnedit As Button
     Friend WithEvents btntambah As Button
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Label3 As Label
+    Friend WithEvents lblHarga As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents txtlamapinjam As TextBox

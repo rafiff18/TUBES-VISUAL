@@ -336,7 +336,7 @@ Module mdFungsiUmum
 
         Try
             bukaDB()
-            myCommand = New MySqlCommand("SELECT p.noPeminjaman, a.namaPelanggan, b.merkLaptop, p.lamaMeminjam FROM peminjaman p, pelanggan a, laptop b WHERE a.noPelanggan = p.noPelanggan AND b.noLaptop = p.noLaptop ORDER BY p.noPeminjaman", db)
+            myCommand = New MySqlCommand("SELECT p.noPeminjaman, a.namaPelanggan, b.merkLaptop, p.lamaMeminjam, p.totalHarga FROM peminjaman p, pelanggan a, laptop b WHERE a.noPelanggan = p.noPelanggan AND b.noLaptop = p.noLaptop ORDER BY p.noPeminjaman", db)
             myAdapter = New MySqlDataAdapter(myCommand)
             myAdapter = New MySqlDataAdapter(myCommand)
             myDataset = New DataSet
@@ -361,7 +361,7 @@ Module mdFungsiUmum
         Try
             bukaDB()
 
-            myCommand = New MySqlCommand("SELECT p.noPeminjaman, a.namaPelanggan, b.merkLaptop , p.lamaMeminjam FROM peminjaman p, pelanggan a, laptop b WHERE b.noLaptop = p.noLaptop AND a.noPelanggan = p.noPelanggan AND noPeminjaman = @noPeminjaman", db)
+            myCommand = New MySqlCommand("SELECT p.noPeminjaman, a.namaPelanggan, b.merkLaptop , p.lamaMeminjam, p.totalHarga FROM peminjaman p, pelanggan a, laptop b WHERE b.noLaptop = p.noLaptop AND a.noPelanggan = p.noPelanggan AND noPeminjaman = @noPeminjaman", db)
             myCommand.Parameters.AddWithValue("@noPeminjaman", noPeminjaman)
             myAdapter = New MySqlDataAdapter(myCommand)
             myDataset = New DataSet
@@ -379,31 +379,6 @@ Module mdFungsiUmum
 
         End Try
     End Function
-
-    Public Sub tambah_menu_pinjam(ByVal noPeminjaman As String, ByVal noPelanggan As String, ByVal noLaptop As String, ByVal lamaMeminjam As String)
-        myCommand = New MySqlCommand
-        myCommand.Connection = db
-        myCommand.CommandText = "INSERT INTO peminjaman (noPeminjaman, noPelanggan, noLaptop, lamaMeminjam) VALUES (@noPeminjaman, @noPelanggan, @noLaptop, @lamaMeminjam)"
-        myCommand.Parameters.AddWithValue("@noPeminjaman", noPeminjaman)
-        myCommand.Parameters.AddWithValue("@noPelanggan", noPelanggan)
-        myCommand.Parameters.AddWithValue("@noLaptop", noLaptop)
-        myCommand.Parameters.AddWithValue("@lamaMeminjam", lamaMeminjam)
-
-        Try
-            bukaDB()
-            myCommand.ExecuteNonQuery()
-            MsgBox("Data berhasil di simpan")
-            tutupDB()
-
-        Catch ex As Exception
-            MsgBox(ex.Message)
-            MsgBox("Gagal dalam menyimpan data")
-
-        Finally
-            tutupDB()
-
-        End Try
-    End Sub
 
     Public Sub hapus_menu_pinjam(ByVal noPeminjaman As String)
         myCommand = New MySqlCommand

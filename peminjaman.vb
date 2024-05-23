@@ -14,17 +14,7 @@
 
     Private Sub btnkembali_Click(sender As Object, e As EventArgs) Handles btnkembali.Click
         Me.Close()
-    End Sub
-
-    Private Sub btntambah_Click(sender As Object, e As EventArgs) Handles btntambah.Click
-        Try
-            tambah_menu_pinjam(txtpinjam.Text, txtnopel.Text, txtnolaptop.Text, txtlamapinjam.Text)
-        Catch ex As Exception
-            MsgBox(ex.Message)
-            MsgBox("Isi data dengan benar", MsgBoxStyle.Critical, "Message")
-        End Try
-
-        DataGridView1.DataSource = getTabelPinjam()
+        Form1.Show()
     End Sub
 
     Private Sub btnedit_Click(sender As Object, e As EventArgs) Handles btnedit.Click
@@ -43,6 +33,7 @@
         txtnopel.Text = DataGridView1.Item(1, DataGridView1.CurrentRow.Index).Value.ToString
         txtnolaptop.Text = DataGridView1.Item(2, DataGridView1.CurrentRow.Index).Value.ToString
         txtlamapinjam.Text = DataGridView1.Item(3, DataGridView1.CurrentRow.Index).Value.ToString
+        lblHarga.Text = DataGridView1.Item(4, DataGridView1.CurrentRow.Index).Value.ToString
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
