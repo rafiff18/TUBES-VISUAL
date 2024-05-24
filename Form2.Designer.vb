@@ -296,7 +296,7 @@ Partial Class Form2
         ForeColor = Color.FromArgb(CByte(87), CByte(166), CByte(161))
         Margin = New Padding(4)
         Name = "Form2"
-        Text = "Form2"
+        Text = "Form data laptop"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()

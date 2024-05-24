@@ -116,7 +116,7 @@ Partial Class Form1
         ForeColor = Color.DarkSlateGray
         Margin = New Padding(4)
         Name = "Form1"
-        Text = "Form1"
+        Text = "menu utama Admin"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)

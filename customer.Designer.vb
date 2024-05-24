@@ -26,6 +26,7 @@ Partial Class customer
         numDuration = New NumericUpDown()
         ComboBox1 = New ComboBox()
         btnSubmit = New Button()
+        Label1 = New Label()
         CType(dgvLaptops, ComponentModel.ISupportInitialize).BeginInit()
         CType(numDuration, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -34,7 +35,7 @@ Partial Class customer
         ' 
         dgvLaptops.BackgroundColor = Color.FromArgb(CByte(87), CByte(166), CByte(161))
         dgvLaptops.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvLaptops.Location = New Point(13, 76)
+        dgvLaptops.Location = New Point(13, 98)
         dgvLaptops.Margin = New Padding(4)
         dgvLaptops.Name = "dgvLaptops"
         dgvLaptops.Size = New Size(905, 258)
@@ -42,7 +43,7 @@ Partial Class customer
         ' 
         ' numDuration
         ' 
-        numDuration.Location = New Point(738, 24)
+        numDuration.Location = New Point(173, 17)
         numDuration.Margin = New Padding(4)
         numDuration.Name = "numDuration"
         numDuration.Size = New Size(171, 26)
@@ -51,7 +52,7 @@ Partial Class customer
         ' ComboBox1
         ' 
         ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(538, 22)
+        ComboBox1.Location = New Point(173, 51)
         ComboBox1.Margin = New Padding(4)
         ComboBox1.Name = "ComboBox1"
         ComboBox1.Size = New Size(171, 27)
@@ -67,12 +68,22 @@ Partial Class customer
         btnSubmit.Text = "submit"
         btnSubmit.UseVisualStyleBackColor = True
         ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(44, 19)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(122, 19)
+        Label1.TabIndex = 4
+        Label1.Text = "Berapa hari :"
+        ' 
         ' customer
         ' 
         AutoScaleDimensions = New SizeF(10F, 19F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(87), CByte(123), CByte(141))
         ClientSize = New Size(931, 422)
+        Controls.Add(Label1)
         Controls.Add(btnSubmit)
         Controls.Add(ComboBox1)
         Controls.Add(numDuration)
@@ -84,10 +95,12 @@ Partial Class customer
         CType(dgvLaptops, ComponentModel.ISupportInitialize).EndInit()
         CType(numDuration, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents dgvLaptops As DataGridView
     Friend WithEvents numDuration As NumericUpDown
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents btnSubmit As Button
+    Friend WithEvents Label1 As Label
 End Class
