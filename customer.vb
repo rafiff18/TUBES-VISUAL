@@ -33,13 +33,13 @@ Public Class customer
         If e.RowIndex >= 0 Then
             Dim selectedRow As DataGridViewRow = dgvLaptops.Rows(e.RowIndex)
             selectedLaptopId = selectedRow.Cells("noLaptop").Value.ToString()
-            MessageBox.Show($"Selected Laptop: {selectedRow.Cells("merkLaptop").Value} {selectedRow.Cells("seriLaptop").Value} {selectedRow.Cells("tipeLaptop").Value}")
+            MessageBox.Show($"Pilihan anda: {selectedRow.Cells("merkLaptop").Value} {selectedRow.Cells("seriLaptop").Value} {selectedRow.Cells("tipeLaptop").Value}")
         End If
     End Sub
 
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
         If String.IsNullOrEmpty(selectedLaptopId) Then
-            MsgBox("Please select a laptop by double-clicking a row in the table.")
+            MsgBox("Klik 2x pada tabel untuk memilih.")
             Return
         End If
 

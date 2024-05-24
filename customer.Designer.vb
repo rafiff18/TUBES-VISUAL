@@ -24,7 +24,6 @@ Partial Class customer
     Private Sub InitializeComponent()
         dgvLaptops = New DataGridView()
         numDuration = New NumericUpDown()
-        ComboBox1 = New ComboBox()
         btnSubmit = New Button()
         Label1 = New Label()
         CType(dgvLaptops, ComponentModel.ISupportInitialize).BeginInit()
@@ -35,10 +34,10 @@ Partial Class customer
         ' 
         dgvLaptops.BackgroundColor = Color.FromArgb(CByte(87), CByte(166), CByte(161))
         dgvLaptops.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvLaptops.Location = New Point(13, 98)
+        dgvLaptops.Location = New Point(13, 61)
         dgvLaptops.Margin = New Padding(4)
         dgvLaptops.Name = "dgvLaptops"
-        dgvLaptops.Size = New Size(905, 258)
+        dgvLaptops.Size = New Size(851, 258)
         dgvLaptops.TabIndex = 0
         ' 
         ' numDuration
@@ -46,21 +45,12 @@ Partial Class customer
         numDuration.Location = New Point(173, 17)
         numDuration.Margin = New Padding(4)
         numDuration.Name = "numDuration"
-        numDuration.Size = New Size(171, 26)
+        numDuration.Size = New Size(193, 26)
         numDuration.TabIndex = 1
-        ' 
-        ' ComboBox1
-        ' 
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(173, 51)
-        ComboBox1.Margin = New Padding(4)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(171, 27)
-        ComboBox1.TabIndex = 2
         ' 
         ' btnSubmit
         ' 
-        btnSubmit.Location = New Point(811, 364)
+        btnSubmit.Location = New Point(386, 324)
         btnSubmit.Margin = New Padding(4)
         btnSubmit.Name = "btnSubmit"
         btnSubmit.Size = New Size(107, 39)
@@ -71,6 +61,7 @@ Partial Class customer
         ' Label1
         ' 
         Label1.AutoSize = True
+        Label1.ForeColor = Color.Black
         Label1.Location = New Point(44, 19)
         Label1.Name = "Label1"
         Label1.Size = New Size(122, 19)
@@ -82,10 +73,9 @@ Partial Class customer
         AutoScaleDimensions = New SizeF(10F, 19F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(87), CByte(123), CByte(141))
-        ClientSize = New Size(931, 422)
+        ClientSize = New Size(872, 376)
         Controls.Add(Label1)
         Controls.Add(btnSubmit)
-        Controls.Add(ComboBox1)
         Controls.Add(numDuration)
         Controls.Add(dgvLaptops)
         Font = New Font("Stencil", 12F)
@@ -100,7 +90,6 @@ Partial Class customer
 
     Friend WithEvents dgvLaptops As DataGridView
     Friend WithEvents numDuration As NumericUpDown
-    Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents btnSubmit As Button
     Friend WithEvents Label1 As Label
 End Class

@@ -26,10 +26,7 @@ Partial Class peminjaman
         btncari = New Button()
         btnhapus = New Button()
         btnedit = New Button()
-        btntambah = New Button()
         GroupBox1 = New GroupBox()
-        lblHarga = New Label()
-        Label2 = New Label()
         Label1 = New Label()
         txtlamapinjam = New TextBox()
         txtnolaptop = New TextBox()
@@ -47,7 +44,7 @@ Partial Class peminjaman
         ' 
         ' btnkembali
         ' 
-        btnkembali.Location = New Point(779, 240)
+        btnkembali.Location = New Point(612, 210)
         btnkembali.Margin = New Padding(4)
         btnkembali.Name = "btnkembali"
         btnkembali.Size = New Size(159, 36)
@@ -57,7 +54,7 @@ Partial Class peminjaman
         ' 
         ' btncari
         ' 
-        btncari.Location = New Point(445, 240)
+        btncari.Location = New Point(278, 210)
         btncari.Margin = New Padding(4)
         btncari.Name = "btncari"
         btncari.Size = New Size(159, 36)
@@ -67,7 +64,7 @@ Partial Class peminjaman
         ' 
         ' btnhapus
         ' 
-        btnhapus.Location = New Point(612, 240)
+        btnhapus.Location = New Point(445, 210)
         btnhapus.Margin = New Padding(4)
         btnhapus.Name = "btnhapus"
         btnhapus.Size = New Size(159, 36)
@@ -77,7 +74,7 @@ Partial Class peminjaman
         ' 
         ' btnedit
         ' 
-        btnedit.Location = New Point(278, 240)
+        btnedit.Location = New Point(111, 210)
         btnedit.Margin = New Padding(4)
         btnedit.Name = "btnedit"
         btnedit.Size = New Size(159, 36)
@@ -85,20 +82,8 @@ Partial Class peminjaman
         btnedit.Text = "Edit"
         btnedit.UseVisualStyleBackColor = True
         ' 
-        ' btntambah
-        ' 
-        btntambah.Location = New Point(111, 240)
-        btntambah.Margin = New Padding(4)
-        btntambah.Name = "btntambah"
-        btntambah.Size = New Size(159, 36)
-        btntambah.TabIndex = 28
-        btntambah.Text = "tambah"
-        btntambah.UseVisualStyleBackColor = True
-        ' 
         ' GroupBox1
         ' 
-        GroupBox1.Controls.Add(lblHarga)
-        GroupBox1.Controls.Add(Label2)
         GroupBox1.Controls.Add(Label1)
         GroupBox1.Controls.Add(txtlamapinjam)
         GroupBox1.Controls.Add(txtnolaptop)
@@ -111,30 +96,10 @@ Partial Class peminjaman
         GroupBox1.Margin = New Padding(4)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Padding = New Padding(4)
-        GroupBox1.Size = New Size(888, 167)
+        GroupBox1.Size = New Size(888, 131)
         GroupBox1.TabIndex = 27
         GroupBox1.TabStop = False
         GroupBox1.Text = "data Peminjaman"
-        ' 
-        ' lblHarga
-        ' 
-        lblHarga.AutoSize = True
-        lblHarga.Location = New Point(448, 127)
-        lblHarga.Margin = New Padding(4, 0, 4, 0)
-        lblHarga.Name = "lblHarga"
-        lblHarga.Size = New Size(66, 19)
-        lblHarga.TabIndex = 22
-        lblHarga.Text = "Label3"
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(301, 127)
-        Label2.Margin = New Padding(4, 0, 4, 0)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(124, 19)
-        Label2.TabIndex = 21
-        Label2.Text = "Total Harga :"
         ' 
         ' Label1
         ' 
@@ -212,7 +177,7 @@ Partial Class peminjaman
         ' 
         DataGridView1.BackgroundColor = Color.FromArgb(CByte(87), CByte(166), CByte(161))
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(82, 294)
+        DataGridView1.Location = New Point(82, 271)
         DataGridView1.Margin = New Padding(4)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.Size = New Size(888, 180)
@@ -221,9 +186,9 @@ Partial Class peminjaman
         ' Button1
         ' 
         Button1.Font = New Font("Stencil", 12F)
-        Button1.Location = New Point(863, 481)
+        Button1.Location = New Point(778, 210)
         Button1.Name = "Button1"
-        Button1.Size = New Size(107, 29)
+        Button1.Size = New Size(159, 36)
         Button1.TabIndex = 33
         Button1.Text = "Clear"
         Button1.UseVisualStyleBackColor = True
@@ -240,13 +205,12 @@ Partial Class peminjaman
         AutoScaleDimensions = New SizeF(10F, 19F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(52), CByte(76), CByte(100))
-        ClientSize = New Size(1054, 542)
+        ClientSize = New Size(1054, 488)
         Controls.Add(Button1)
         Controls.Add(btnkembali)
         Controls.Add(btncari)
         Controls.Add(btnhapus)
         Controls.Add(btnedit)
-        Controls.Add(btntambah)
         Controls.Add(GroupBox1)
         Controls.Add(DataGridView1)
         Font = New Font("Stencil", 12F)
@@ -264,10 +228,7 @@ Partial Class peminjaman
     Friend WithEvents btncari As Button
     Friend WithEvents btnhapus As Button
     Friend WithEvents btnedit As Button
-    Friend WithEvents btntambah As Button
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents lblHarga As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents txtlamapinjam As TextBox
     Friend WithEvents txtnolaptop As TextBox

@@ -31,48 +31,48 @@ Partial Class login
         ' 
         ' txtUsername
         ' 
-        txtUsername.Font = New Font("Stencil", 15.75F)
+        txtUsername.Font = New Font("STFangsong", 15.75F)
         txtUsername.Location = New Point(233, 63)
         txtUsername.Margin = New Padding(4)
         txtUsername.Name = "txtUsername"
-        txtUsername.Size = New Size(141, 32)
+        txtUsername.Size = New Size(141, 35)
         txtUsername.TabIndex = 0
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Stencil", 15.75F)
+        Label1.Font = New Font("STFangsong", 15.75F)
         Label1.Location = New Point(105, 66)
         Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(120, 25)
+        Label1.Size = New Size(94, 23)
         Label1.TabIndex = 1
         Label1.Text = "Username"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Stencil", 15.75F)
+        Label2.Font = New Font("STFangsong", 15.75F)
         Label2.Location = New Point(104, 123)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(121, 25)
+        Label2.Size = New Size(89, 23)
         Label2.TabIndex = 3
         Label2.Text = "Password"
         ' 
         ' txtPassword
         ' 
-        txtPassword.Font = New Font("Stencil", 15.75F)
+        txtPassword.Font = New Font("STFangsong", 15.75F)
         txtPassword.Location = New Point(233, 120)
         txtPassword.Margin = New Padding(4)
         txtPassword.Name = "txtPassword"
         txtPassword.PasswordChar = "*"c
-        txtPassword.Size = New Size(141, 32)
+        txtPassword.Size = New Size(141, 35)
         txtPassword.TabIndex = 2
         ' 
         ' btnLogin
         ' 
-        btnLogin.Font = New Font("Stencil", 15.75F)
+        btnLogin.Font = New Font("STFangsong", 15.75F)
         btnLogin.Location = New Point(177, 189)
         btnLogin.Margin = New Padding(4)
         btnLogin.Name = "btnLogin"
