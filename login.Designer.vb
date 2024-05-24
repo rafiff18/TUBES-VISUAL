@@ -31,56 +31,69 @@ Partial Class login
         ' 
         ' txtUsername
         ' 
-        txtUsername.Location = New Point(330, 99)
+        txtUsername.Font = New Font("Stencil", 15.75F)
+        txtUsername.Location = New Point(233, 63)
+        txtUsername.Margin = New Padding(4)
         txtUsername.Name = "txtUsername"
-        txtUsername.Size = New Size(100, 23)
+        txtUsername.Size = New Size(141, 32)
         txtUsername.TabIndex = 0
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(253, 102)
+        Label1.Font = New Font("Stencil", 15.75F)
+        Label1.Location = New Point(105, 66)
+        Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(60, 15)
+        Label1.Size = New Size(120, 25)
         Label1.TabIndex = 1
         Label1.Text = "Username"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(253, 147)
+        Label2.Font = New Font("Stencil", 15.75F)
+        Label2.Location = New Point(104, 123)
+        Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(57, 15)
+        Label2.Size = New Size(121, 25)
         Label2.TabIndex = 3
         Label2.Text = "Password"
         ' 
         ' txtPassword
         ' 
-        txtPassword.Location = New Point(330, 144)
+        txtPassword.Font = New Font("Stencil", 15.75F)
+        txtPassword.Location = New Point(233, 120)
+        txtPassword.Margin = New Padding(4)
         txtPassword.Name = "txtPassword"
         txtPassword.PasswordChar = "*"c
-        txtPassword.Size = New Size(100, 23)
+        txtPassword.Size = New Size(141, 32)
         txtPassword.TabIndex = 2
         ' 
         ' btnLogin
         ' 
-        btnLogin.Location = New Point(300, 197)
+        btnLogin.Font = New Font("Stencil", 15.75F)
+        btnLogin.Location = New Point(177, 189)
+        btnLogin.Margin = New Padding(4)
         btnLogin.Name = "btnLogin"
-        btnLogin.Size = New Size(75, 23)
+        btnLogin.Size = New Size(107, 29)
         btnLogin.TabIndex = 4
         btnLogin.Text = "Login"
         btnLogin.UseVisualStyleBackColor = True
         ' 
         ' login
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(10F, 19F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
+        BackColor = Color.FromArgb(CByte(87), CByte(123), CByte(141))
+        ClientSize = New Size(445, 273)
         Controls.Add(btnLogin)
         Controls.Add(Label2)
         Controls.Add(txtPassword)
         Controls.Add(Label1)
         Controls.Add(txtUsername)
+        Font = New Font("Stencil", 12F)
+        Margin = New Padding(4)
         Name = "login"
         Text = "login"
         ResumeLayout(False)

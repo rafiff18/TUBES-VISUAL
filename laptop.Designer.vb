@@ -168,6 +168,7 @@ Partial Class pelanggan
         ' 
         ' DataGridView1
         ' 
+        DataGridView1.BackgroundColor = Color.FromArgb(CByte(87), CByte(166), CByte(161))
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridView1.Location = New Point(67, 274)
         DataGridView1.Margin = New Padding(4)
@@ -229,17 +230,17 @@ Partial Class pelanggan
         ' 
         Button1.Location = New Point(719, 466)
         Button1.Name = "Button1"
-        Button1.Size = New Size(75, 23)
+        Button1.Size = New Size(95, 33)
         Button1.TabIndex = 38
-        Button1.Text = "Button1"
+        Button1.Text = "Clear"
         Button1.UseVisualStyleBackColor = True
         ' 
         ' pelanggan
         ' 
-        AutoScaleDimensions = New SizeF(10.0F, 19.0F)
+        AutoScaleDimensions = New SizeF(10F, 19F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(52), CByte(76), CByte(100))
-        ClientSize = New Size(887, 495)
+        ClientSize = New Size(887, 524)
         Controls.Add(Button1)
         Controls.Add(btnkembali)
         Controls.Add(btncari)
@@ -249,7 +250,7 @@ Partial Class pelanggan
         Controls.Add(Label3)
         Controls.Add(GroupBox1)
         Controls.Add(DataGridView1)
-        Font = New Font("Stencil", 12.0F)
+        Font = New Font("Stencil", 12F)
         ForeColor = Color.FromArgb(CByte(87), CByte(166), CByte(161))
         Margin = New Padding(4)
         Name = "pelanggan"

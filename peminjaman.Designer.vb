@@ -47,50 +47,50 @@ Partial Class peminjaman
         ' 
         ' btnkembali
         ' 
-        btnkembali.Location = New Point(730, 253)
+        btnkembali.Location = New Point(779, 240)
         btnkembali.Margin = New Padding(4)
         btnkembali.Name = "btnkembali"
-        btnkembali.Size = New Size(143, 38)
+        btnkembali.Size = New Size(159, 36)
         btnkembali.TabIndex = 32
         btnkembali.Text = "Kembali"
         btnkembali.UseVisualStyleBackColor = True
         ' 
         ' btncari
         ' 
-        btncari.Location = New Point(427, 253)
+        btncari.Location = New Point(445, 240)
         btncari.Margin = New Padding(4)
         btncari.Name = "btncari"
-        btncari.Size = New Size(143, 38)
+        btncari.Size = New Size(159, 36)
         btncari.TabIndex = 31
         btncari.Text = "Cari"
         btncari.UseVisualStyleBackColor = True
         ' 
         ' btnhapus
         ' 
-        btnhapus.Location = New Point(579, 253)
+        btnhapus.Location = New Point(612, 240)
         btnhapus.Margin = New Padding(4)
         btnhapus.Name = "btnhapus"
-        btnhapus.Size = New Size(143, 38)
+        btnhapus.Size = New Size(159, 36)
         btnhapus.TabIndex = 30
         btnhapus.Text = "Hapus"
         btnhapus.UseVisualStyleBackColor = True
         ' 
         ' btnedit
         ' 
-        btnedit.Location = New Point(276, 253)
+        btnedit.Location = New Point(278, 240)
         btnedit.Margin = New Padding(4)
         btnedit.Name = "btnedit"
-        btnedit.Size = New Size(143, 38)
+        btnedit.Size = New Size(159, 36)
         btnedit.TabIndex = 29
         btnedit.Text = "Edit"
         btnedit.UseVisualStyleBackColor = True
         ' 
         ' btntambah
         ' 
-        btntambah.Location = New Point(124, 253)
+        btntambah.Location = New Point(111, 240)
         btntambah.Margin = New Padding(4)
         btntambah.Name = "btntambah"
-        btntambah.Size = New Size(143, 38)
+        btntambah.Size = New Size(159, 36)
         btntambah.TabIndex = 28
         btntambah.Text = "tambah"
         btntambah.UseVisualStyleBackColor = True
@@ -107,11 +107,11 @@ Partial Class peminjaman
         GroupBox1.Controls.Add(txtnopel)
         GroupBox1.Controls.Add(Label9)
         GroupBox1.Controls.Add(txtpinjam)
-        GroupBox1.Location = New Point(74, 61)
+        GroupBox1.Location = New Point(82, 58)
         GroupBox1.Margin = New Padding(4)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Padding = New Padding(4)
-        GroupBox1.Size = New Size(799, 176)
+        GroupBox1.Size = New Size(888, 167)
         GroupBox1.TabIndex = 27
         GroupBox1.TabStop = False
         GroupBox1.Text = "data Peminjaman"
@@ -119,111 +119,113 @@ Partial Class peminjaman
         ' lblHarga
         ' 
         lblHarga.AutoSize = True
-        lblHarga.Location = New Point(403, 134)
+        lblHarga.Location = New Point(448, 127)
         lblHarga.Margin = New Padding(4, 0, 4, 0)
         lblHarga.Name = "lblHarga"
-        lblHarga.Size = New Size(57, 20)
+        lblHarga.Size = New Size(66, 19)
         lblHarga.TabIndex = 22
         lblHarga.Text = "Label3"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(271, 134)
+        Label2.Location = New Point(301, 127)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(100, 20)
+        Label2.Size = New Size(124, 19)
         Label2.TabIndex = 21
         Label2.Text = "Total Harga :"
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(411, 87)
+        Label1.Location = New Point(457, 83)
         Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(125, 20)
+        Label1.Size = New Size(139, 19)
         Label1.TabIndex = 20
         Label1.Text = "Lama Meminjam"
         ' 
         ' txtlamapinjam
         ' 
-        txtlamapinjam.Location = New Point(559, 84)
+        txtlamapinjam.Location = New Point(611, 80)
         txtlamapinjam.Margin = New Padding(4)
         txtlamapinjam.Name = "txtlamapinjam"
-        txtlamapinjam.Size = New Size(205, 26)
+        txtlamapinjam.Size = New Size(227, 26)
         txtlamapinjam.TabIndex = 19
         ' 
         ' txtnolaptop
         ' 
-        txtnolaptop.Location = New Point(550, 43)
+        txtnolaptop.Location = New Point(611, 41)
         txtnolaptop.Margin = New Padding(4)
         txtnolaptop.Name = "txtnolaptop"
-        txtnolaptop.Size = New Size(205, 26)
+        txtnolaptop.Size = New Size(227, 26)
         txtnolaptop.TabIndex = 18
         ' 
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Location = New Point(430, 47)
+        Label7.Location = New Point(457, 44)
         Label7.Margin = New Padding(4, 0, 4, 0)
         Label7.Name = "Label7"
-        Label7.Size = New Size(83, 20)
+        Label7.Size = New Size(93, 19)
         Label7.TabIndex = 17
         Label7.Text = "No Laptop"
         ' 
         ' Label8
         ' 
         Label8.AutoSize = True
-        Label8.Location = New Point(47, 87)
+        Label8.Location = New Point(52, 83)
         Label8.Margin = New Padding(4, 0, 4, 0)
         Label8.Name = "Label8"
-        Label8.Size = New Size(109, 20)
+        Label8.Size = New Size(124, 19)
         Label8.TabIndex = 16
         Label8.Text = "No Pelanggan"
         ' 
         ' txtnopel
         ' 
-        txtnopel.Location = New Point(196, 84)
+        txtnopel.Location = New Point(218, 80)
         txtnopel.Margin = New Padding(4)
         txtnopel.Name = "txtnopel"
-        txtnopel.Size = New Size(205, 26)
+        txtnopel.Size = New Size(227, 26)
         txtnopel.TabIndex = 15
         ' 
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Location = New Point(47, 47)
+        Label9.Location = New Point(52, 45)
         Label9.Margin = New Padding(4, 0, 4, 0)
         Label9.Name = "Label9"
-        Label9.Size = New Size(120, 20)
+        Label9.Size = New Size(136, 19)
         Label9.TabIndex = 14
         Label9.Text = "No Peminjaman"
         ' 
         ' txtpinjam
         ' 
-        txtpinjam.Location = New Point(196, 47)
+        txtpinjam.Location = New Point(218, 45)
         txtpinjam.Margin = New Padding(4)
         txtpinjam.Name = "txtpinjam"
-        txtpinjam.Size = New Size(205, 26)
+        txtpinjam.Size = New Size(227, 26)
         txtpinjam.TabIndex = 13
         ' 
         ' DataGridView1
         ' 
+        DataGridView1.BackgroundColor = Color.FromArgb(CByte(87), CByte(166), CByte(161))
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(74, 310)
+        DataGridView1.Location = New Point(82, 294)
         DataGridView1.Margin = New Padding(4)
         DataGridView1.Name = "DataGridView1"
-        DataGridView1.Size = New Size(799, 190)
+        DataGridView1.Size = New Size(888, 180)
         DataGridView1.TabIndex = 26
         ' 
         ' Button1
         ' 
-        Button1.Location = New Point(707, 524)
+        Button1.Font = New Font("Stencil", 12F)
+        Button1.Location = New Point(863, 481)
         Button1.Name = "Button1"
-        Button1.Size = New Size(75, 23)
+        Button1.Size = New Size(107, 29)
         Button1.TabIndex = 33
-        Button1.Text = "Button1"
+        Button1.Text = "Clear"
         Button1.UseVisualStyleBackColor = True
         ' 
         ' MySqlCommand1
@@ -235,10 +237,10 @@ Partial Class peminjaman
         ' 
         ' peminjaman
         ' 
-        AutoScaleDimensions = New SizeF(9F, 20F)
+        AutoScaleDimensions = New SizeF(10F, 19F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(52), CByte(76), CByte(100))
-        ClientSize = New Size(949, 570)
+        ClientSize = New Size(1054, 542)
         Controls.Add(Button1)
         Controls.Add(btnkembali)
         Controls.Add(btncari)
@@ -247,7 +249,7 @@ Partial Class peminjaman
         Controls.Add(btntambah)
         Controls.Add(GroupBox1)
         Controls.Add(DataGridView1)
-        Font = New Font("Microsoft Sans Serif", 12F)
+        Font = New Font("Stencil", 12F)
         ForeColor = Color.FromArgb(CByte(87), CByte(166), CByte(161))
         Margin = New Padding(4)
         Name = "peminjaman"
