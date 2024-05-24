@@ -465,5 +465,19 @@ Module mdFungsiUmum
     End Function
 #End Region
 
+    Public Sub UpdateStatusLaptopDipinjam(ByVal noLaptop As String)
+        Try
+            bukaDB()
+            myCommand = New MySqlCommand("UPDATE laptop SET statusLaptop = 'Dipinjam' WHERE noLaptop = @noLaptop", db)
+            myCommand.Parameters.AddWithValue("@noLaptop", noLaptop)
+            myCommand.ExecuteNonQuery()
+            MsgBox("Status laptop berhasil diperbarui menjadi 'Dipinjam'")
+        Catch ex As Exception
+            MsgBox("Error: " & ex.Message)
+        Finally
+            tutupDB()
+        End Try
+    End Sub
+
 End Module
 

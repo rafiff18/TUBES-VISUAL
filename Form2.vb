@@ -58,4 +58,8 @@
         bersih_menu()
         DataGridView1.DataSource = getTabelLaptop()
     End Sub
+
+    Private Sub cbStatus_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbStatus.SelectedIndexChanged
+
+    End Sub
 End Class

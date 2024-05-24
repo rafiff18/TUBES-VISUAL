@@ -50,7 +50,11 @@ Public Class customer
 
         ' Process the borrowing (e.g., save to database, show confirmation, etc.)
         ProcessBorrowing(selectedLaptopId, duration, totalPrice)
+
+        ' Memanggil fungsi untuk memperbarui status laptop menjadi "Dipinjam"
+        UpdateStatusLaptopDipinjam(selectedLaptopId)
     End Sub
+
 
     Private Function CalculateTotalPrice(laptopId As String, duration As String) As Decimal
         Try
@@ -92,5 +96,9 @@ Public Class customer
 
     Private Sub customer_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
         login.Show()
+    End Sub
+
+    Private Sub dgvLaptops_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvLaptops.CellContentClick
+
     End Sub
 End Class

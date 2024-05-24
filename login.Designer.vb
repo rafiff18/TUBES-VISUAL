@@ -27,6 +27,7 @@ Partial Class login
         Label2 = New Label()
         txtPassword = New TextBox()
         btnLogin = New Button()
+        Button2 = New Button()
         SuspendLayout()
         ' 
         ' txtUsername
@@ -73,7 +74,7 @@ Partial Class login
         ' btnLogin
         ' 
         btnLogin.Font = New Font("STFangsong", 15.75F)
-        btnLogin.Location = New Point(177, 189)
+        btnLogin.Location = New Point(119, 185)
         btnLogin.Margin = New Padding(4)
         btnLogin.Name = "btnLogin"
         btnLogin.Size = New Size(107, 31)
@@ -81,12 +82,24 @@ Partial Class login
         btnLogin.Text = "Login"
         btnLogin.UseVisualStyleBackColor = True
         ' 
+        ' Button2
+        ' 
+        Button2.Font = New Font("STFangsong", 15.75F)
+        Button2.Location = New Point(234, 185)
+        Button2.Margin = New Padding(4)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(107, 31)
+        Button2.TabIndex = 13
+        Button2.Text = "register"
+        Button2.UseVisualStyleBackColor = True
+        ' 
         ' login
         ' 
         AutoScaleDimensions = New SizeF(10F, 19F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(87), CByte(123), CByte(141))
         ClientSize = New Size(445, 273)
+        Controls.Add(Button2)
         Controls.Add(btnLogin)
         Controls.Add(Label2)
         Controls.Add(txtPassword)
@@ -105,4 +118,5 @@ Partial Class login
     Friend WithEvents Label2 As Label
     Friend WithEvents txtPassword As TextBox
     Friend WithEvents btnLogin As Button
+    Friend WithEvents Button2 As Button
 End Class
