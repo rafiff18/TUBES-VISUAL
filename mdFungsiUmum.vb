@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Drawing.Printing
 Imports MySql.Data.MySqlClient
 
 Module mdFungsiUmum
@@ -479,5 +480,48 @@ Module mdFungsiUmum
         End Try
     End Sub
 
+#Region "Print"
+    Public Sub cetakNota(ByVal noPeminjaman As String)
+        ' Membuat PrintDocument dan PrintPreviewDialog
+        Dim printDoc As New PrintDocument()
+        Dim printPreview As New PrintPreviewDialog()
+
+        ' Menangani event PrintPage untuk PrintDocument
+        AddHandler printDoc.PrintPage, Sub(sender As Object, e As PrintPageEventArgs)
+                                           Dim fontTitle As New Font("Arial", 14, FontStyle.Bold)
+                                           Dim fontRegular As New Font("Arial", 12)
+                                           Dim brush As New SolidBrush(Color.Black)
+
+                                           ' Mengambil data peminjaman dari database
+                                           Dim query As String = "SELECT p.noPeminjaman, pel.namaPelanggan, l.merkLaptop, p.tglPinjam, p.tglKembali, p.totalHarga FROM peminjaman p JOIN pelanggan pel ON p.noPelanggan = pel.noPelanggan JOIN laptop l ON p.noLaptop = l.noLaptop WHERE p.noPeminjaman = @noPeminjaman"
+                                           bukaDB()
+                                           Dim cmd As New MySqlCommand(query, db)
+                                           cmd.Parameters.AddWithValue("@noPeminjaman", noPeminjaman)
+                                           Dim reader As MySqlDataReader = cmd.ExecuteReader()
+
+                                           If reader.HasRows Then
+                                               reader.Read()
+
+                                               ' Mencetak informasi peminjaman
+                                               e.Graphics.DrawString("Nota Peminjaman Laptop", fontTitle, brush, 100, 50)
+                                               e.Graphics.DrawString("No. Peminjaman: " & reader("noPeminjaman").ToString(), fontRegular, brush, 100, 100)
+                                               e.Graphics.DrawString("Nama Pelanggan: " & reader("namaPelanggan").ToString(), fontRegular, brush, 100, 130)
+                                               e.Graphics.DrawString("Merk Laptop: " & reader("merkLaptop").ToString(), fontRegular, brush, 100, 160)
+                                               e.Graphics.DrawString("Tanggal Pinjam: " & Convert.ToDateTime(reader("tglPinjam")).ToString("dd/MM/yyyy"), fontRegular, brush, 100, 190)
+                                               e.Graphics.DrawString("Tanggal Kembali: " & Convert.ToDateTime(reader("tglKembali")).ToString("dd/MM/yyyy"), fontRegular, brush, 100, 220)
+                                               e.Graphics.DrawString("Total Harga: Rp " & Convert.ToDecimal(reader("totalHarga")).ToString("N2"), fontRegular, brush, 100, 250)
+                                           Else
+                                               MsgBox("Data peminjaman tidak ditemukan.")
+                                           End If
+
+                                           reader.Close()
+                                           tutupDB()
+                                       End Sub
+
+        ' Menampilkan PrintPreviewDialog
+        printPreview.Document = printDoc
+        printPreview.ShowDialog()
+    End Sub
+#End Region
 End Module
 

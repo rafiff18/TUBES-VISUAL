@@ -52,4 +52,5 @@
         bersih_menu_pelanggan()
         DataGridView1.DataSource = getTabelPelanggan()
     End Sub
+
 End Class

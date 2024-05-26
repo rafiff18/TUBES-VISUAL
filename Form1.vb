@@ -18,4 +18,9 @@
     Private Sub Form1_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
         login.Show()
     End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Me.Hide()
+        login.Show()
+    End Sub
 End Class
